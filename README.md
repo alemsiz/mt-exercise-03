@@ -14,7 +14,7 @@ This repo shows how to train neural language models using [Pytorch example code]
 
 Clone this repository in the desired place:
 
-    git clone https://github.com/moritz-steiner/mt-exercise-03
+    git clone https://github.com/alemsiz/mt-exercise-03
     cd mt-exercise-03
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
@@ -35,15 +35,17 @@ Train a model:
 
     ./scripts/train.sh
 
-Various parameters can be altered in this script, e.g. to change the dropout rate please change the value after `--dropout`.
+Various parameters can be altered in this script, e.g. to change the dropout rate please change the value of the `--dropout` argument.
 
-If you wish to produce a log file containing the training and validation perplexities for each epoch of training, please add the `--log-ppl` flag to the command line arguments. In this case, you will also need to indicate a filepath to store the results using the `--results` argument.
+If you wish to produce a log file containing the training and validation perplexities for each epoch of training, please ensure the `--log-ppl` flag is included in the command line arguments. In this case, you will also need to indicate a filepath to store the results using the `--results` argument.
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
 Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
+
+The output path for the generated sample can be changed.
 
 # Modifications for Part 1
 
