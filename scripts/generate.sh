@@ -17,6 +17,6 @@ device=""
     CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python generate.py \
         --data $data/dante \
         --words 100 \
-        --checkpoint $models/model.pt \
-        --outf $samples/sample
+        --checkpoint $models/08_drop_model.pt \
+        --outf $samples/dropout_08_sample
 )
