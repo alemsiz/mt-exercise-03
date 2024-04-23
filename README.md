@@ -71,6 +71,8 @@ I edited `/tools/pytorch-examples/word language model/main.py` by adding two new
 
 The necessary amendments were then made to the rest of the script to create and populate this log file, storing the training and validation perplexities at each epoch.
 
+**I committed a copy of my edited `main.py` to the `scripts` directory.**
+
 In light of these changes to the training script, I also edited `/scripts/train.sh` in order to create log files for the models I trained. Namely, I added the new flag `--log-ppl` to the command line arguments and also my desired log file name in `--results`. I also edited the dropout value for each of the 5 models I trained (models were trained for the following dropout values: 0, 0.2, 0.4, 0.6, 0.8) - trained models can be found in the `models` folder.
 
 
