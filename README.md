@@ -45,7 +45,7 @@ Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
 
-The output path for the generated sample can be changed.
+The output path for the generated sample can be changed by editing the `--outf` argument.
 
 # Modifications for Part 1
 
