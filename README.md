@@ -41,4 +41,20 @@ Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
 
+# Modifications for Part 1
+
+All major modifications for this part of the exercise were made in `download_data.sh`.
+
+Firstly, I changed all the file names to reflect the name of the new dataset (from `grimm` to `dante`).
+
+I then edited the `wget` command to fetch Dante’s Divine Comedy from Project Gutenberg.
+
+For the raw processing, I input the entire original text file taken from Project Gutenberg to `preprocess_raw.py`, and generated a cleaned file of 14442 lines. Since the final preprocessed data set should contain between 5000 and 10000 segments (lines), I then edited the script so that only the first 10133 lines were input to `preprocessing.py`. I chose this number because the first 133 lines of the cleaned text were preamble, meaning that after skipping these I would have 10000 lines to distribute between the training, validation and testing datasets.
+
+I also edited the command to run `preprocess.py` to remove the `--sent-tokenize` flag, since my chosen text is a poem and so sentences are intentionally split across different lines. In order for the model-generated content to reflect the original text, I wanted to preserve these line breaks in the preprocessed data.
+
+This data split is then created in the final three lines of the code, where testing and validation receive 1000 lines each and training receives 8000.
+
+The only other minor modifications I made were to the filenames (`grimm` > `dante`) in `train.sh` and `generate.sh`.
+
 
