@@ -52,7 +52,7 @@ parser.add_argument('--nhead', type=int, default=2,
                     help='the number of heads in the encoder/decoder of the transformer model')
 parser.add_argument('--dry-run', action='store_true',
                     help='verify the code and the model')
-parser.add_argument('--log-ppl', action='store_true', help='log the train, test and validation perplexities for each epoch')
+parser.add_argument('--log-ppl', action='store_true', help='log the training and validation perplexities for each epoch')
 parser.add_argument('--results', type=str, required=True,
                     help='path to save the results file with perplexities per epoch')
 args = parser.parse_args()
