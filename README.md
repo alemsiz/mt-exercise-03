@@ -37,6 +37,8 @@ Train a model:
 
 Various parameters can be altered in this script, e.g. to change the dropout rate please change the value of the `--dropout` argument.
 
+The path to save the trained model to can be edited by changing the `--save` argument in the script.
+
 If you wish to produce a log file containing the training and validation perplexities for each epoch of training, please ensure the `--log-ppl` flag is included in the command line arguments. In this case, you will also need to indicate a filepath to store the results using the `--results` argument.
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
